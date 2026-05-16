@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-canchas
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: canchas_app
+    ports:
+      - "3308:3306"
+    volumes:
+      - canchas_data:/var/lib/mysql
+
+volumes:
+  canchas_data:
