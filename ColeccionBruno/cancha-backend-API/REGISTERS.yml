@@ -1,0 +1,24 @@
+info:
+  name: REGISTERS
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/api/users/register
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Rodrigo Owner",
+        "email": "owner@test.com",
+        "password": "123456",
+        "role": "owner"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
